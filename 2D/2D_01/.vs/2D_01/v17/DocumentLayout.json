@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\asus\\Desktop\\unity\\2D\\2D_01\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|c:\\users\\asus\\desktop\\unity\\2d\\2d_01\\assets\\scripts\\unitystartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|c:\\users\\administrator\\desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2d\\2d_01\\assets\\scripts\\unitystartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitystartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,17 +14,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UnityStartUp.cs",
-              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\unity\\2D\\2D_01\\Assets\\Scripts\\UnityStartUp.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\UnityStartUp.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnityStartUp.cs",
-              "ToolTip": "C:\\Users\\asus\\Desktop\\unity\\2D\\2D_01\\Assets\\Scripts\\UnityStartUp.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\UnityStartUp.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnityStartUp.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAWAAAA",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAwwKMAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T10:35:13.145Z",
               "EditorCaption": ""

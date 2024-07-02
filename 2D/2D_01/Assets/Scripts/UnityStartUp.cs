@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class UnityStartUp : MonoBehaviour
 {
+    #region 유니티 생명주기
     // 맨 처음 실행시켰을 때 한번 호출됩니다.
     private void Awake()
     {
@@ -55,4 +57,6 @@ public class UnityStartUp : MonoBehaviour
     {
         Debug.Log("OnDestroy");
     }
+    #endregion
+
 }
