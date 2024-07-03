@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|c:\\users\\administrator\\desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2d\\2d_01\\assets\\scripts\\unitystartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|c:\\users\\administrator\\desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2d\\2d_01\\assets\\scripts\\airplane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\airplane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\assets\\scripts\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\assets\\scripts\\unitystartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D3DBCC5-A3D9-2408-AA2A-07434950D78C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitystartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,16 +38,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Missile.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\Missile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Missile.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\Missile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Missile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T09:49:13.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T10:42:13.906Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Airplane.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\Airplane.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Airplane.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\Airplane.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Airplane.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T10:41:19.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UnityStartUp.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\UnityStartUp.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnityStartUp.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uAE40\uCC3D\uBC94\\unity\\unity\\2D\\2D_01\\Assets\\Scripts\\UnityStartUp.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnityStartUp.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAwwKMAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T10:35:13.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T10:35:13.145Z"
             }
           ]
         }
