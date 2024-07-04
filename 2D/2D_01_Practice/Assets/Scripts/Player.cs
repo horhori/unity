@@ -23,6 +23,11 @@ public class Player : MonoBehaviour
     // 미사일을 쏠 때 지난 시간을 체크할 변수
     public float _MissileShootCheckTime = 0.0f;
 
+    // 복사 생성시킬 폭탄의 원본 오브젝트를 참조할 변수
+    public GameObject m_BombOri = null;
+
+    public static int _BombCount = 3;
+
 
     private void Update()
     {
@@ -85,6 +90,10 @@ public class Player : MonoBehaviour
             {
                 MissileShoot();
             }
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                BombShoot();
+            }
             if (!Input.anyKey)
             {
                 _DirectionVector = Vector2.zero;
@@ -102,9 +111,6 @@ public class Player : MonoBehaviour
             Mathf.Clamp(transform.position.x, LeftPositionX, RightPositionX),
             Mathf.Clamp(transform.position.y, DownPositionY, UpPositionY)
             );
-
-
-        // y축 안됨
     }
 
     // 미사일 발사
@@ -125,5 +131,26 @@ public class Player : MonoBehaviour
         newMissile.transform.position = transform.position;
 
         Destroy(newMissile, 3.0f);
+    }
+
+    // 폭탄 발사
+    private void BombShoot()
+    {
+        if (Time.time - _MissileShootCheckTime >= Random.Range(0.2f, 0.6f) && _BombCount > 0)
+        {
+            _BombCount--;
+            _MissileShootCheckTime = Time.time;
+
+            CreateBomb();
+        }
+    }
+
+    private void CreateBomb()
+    {
+        GameObject newBomb = Instantiate(m_BombOri);
+
+        newBomb.transform.position = transform.position;
+
+        Destroy(newBomb, 5.0f);
     }
 }

@@ -27,6 +27,8 @@ public class PlayerHp : MonoBehaviour
             // 변경된 hp값을 hp바에 적용
             UpdateHpBar();
 
+            Destroy(collision.gameObject);
+
             // hp가 0이하 되면 Destroy
             if (m_Hp <= 0.0f)
             {

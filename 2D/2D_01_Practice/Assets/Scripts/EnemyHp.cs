@@ -9,12 +9,14 @@ public class EnemyHp : MonoBehaviour
 
     // 적의 체력
     [Range(0.0f, 500.0f)]
-    public float m_Hp = 500.0f;
+    public static float m_EnemyHp = 500.0f;
+
+    public static float m_EnemyHalfHp = m_EnemyHp * 0.5f;
 
     // 플레이어의 체력에 따라 체력바 길이를 조절
     public void UpdateHpBar()
     {
-        HpBarParentTransform.localScale = new Vector2(m_Hp / 500, 1.0f);
+        HpBarParentTransform.localScale = new Vector2(m_EnemyHp / 500, 1.0f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,13 +24,31 @@ public class EnemyHp : MonoBehaviour
         if (collision.CompareTag("Missile"))
         {
             // hp에서 10을 뺌
-            m_Hp -= 10.0f;
+            m_EnemyHp -= 10.0f;
 
             // 변경된 hp값을 hp바에 적용
             UpdateHpBar();
 
+            Destroy(collision.gameObject);
+
             // hp가 0이하 되면 Destroy
-            if (m_Hp <= 0.0f)
+            if (m_EnemyHp <= 0.0f)
+            {
+                Destroy(gameObject);
+            }
+        }
+        if (collision.CompareTag("Bomb"))
+        {
+            m_EnemyHp -= 50.0f;
+
+            // 변경된 hp값을 hp바에 적용
+            UpdateHpBar();
+
+            Destroy(collision.gameObject);
+
+
+            // hp가 0이하 되면 Destroy
+            if (m_EnemyHp <= 0.0f)
             {
                 Destroy(gameObject);
             }
