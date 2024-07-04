@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
     // 지정된 방향으로 이동
     private void MovePlayerCharacter()
     {
-        // > _DirectionVector 방향으로 _MoveSpeed 속도마큼 이동
+        // > _DirectionVector 방향으로 _MoveSpeed 속도만큼 이동
         transform.Translate(_DirectionVector * _MoveSpeed * Time.deltaTime, Space.World);
 
         // > 플레이어의 x 위치가 맵 끝으로 넘어가지 않도록

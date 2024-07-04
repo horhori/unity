@@ -624,6 +624,8 @@ GameObject:
   - component: {fileID: 1689836060}
   - component: {fileID: 1689836061}
   - component: {fileID: 1689836062}
+  - component: {fileID: 1689836064}
+  - component: {fileID: 1689836063}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -675,6 +677,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HpBarParentTransform: {fileID: 502629516}
   m_Hp: 100
+--- !u!50 &1689836063
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689836059}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &1689836064
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689836059}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.32748047, y: 0.36782885}
+      - {x: 0.29212362, y: 0.4026482}
+      - {x: 0.19735132, y: 0.3773837}
+      - {x: -0.01866252, y: 0.33123922}
+      - {x: -0.077180296, y: 0.23251152}
+      - {x: -0.1859274, y: 0.23539877}
+      - {x: -0.42165405, y: -0.0008113086}
+      - {x: -0.15872076, y: -0.26583004}
+      - {x: -0.15503745, y: -0.26988935}
+      - {x: -0.1458678, y: -0.27080727}
+      - {x: -0.056979842, y: -0.2712345}
+      - {x: -0.0068252683, y: -0.3525548}
+      - {x: 0.0842915, y: -0.3925656}
+      - {x: 0.34046888, y: -0.42708373}
+      - {x: 0.42433578, y: -0.123411655}
+      - {x: 0.3733905, y: -0.026833057}
+      - {x: 0.41885608, y: 0.028570175}
+      - {x: 0.41027778, y: 0.11673969}
 --- !u!1 &2036967882
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +811,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: b2a8fc87cf3eec14ebff1c36a971aaca, type: 3}
   m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   m_FlipX: 0

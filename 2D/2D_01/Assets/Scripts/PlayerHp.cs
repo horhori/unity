@@ -16,4 +16,23 @@ public class PlayerHp : MonoBehaviour
     {
         HpBarParentTransform.localScale = new Vector2(m_Hp / 100, 1.0f);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 미사일이 들어온다면
+        if(collision.CompareTag("Missile"))
+        {
+            // hp에서 10을 뺌
+            m_Hp -= 10.0f;
+
+            // 변경된 hp값을 hp바에 적용
+            UpdateHpBar();
+
+            // hp가 0이하 되면 Destroy
+            if (m_Hp <= 0.0f)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }
