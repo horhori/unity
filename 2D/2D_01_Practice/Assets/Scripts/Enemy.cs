@@ -19,14 +19,17 @@ public class Enemy : MonoBehaviour
     // 플레이어 위치를 받아올 때 지난 시간을 체크할 변수
     private float _PlayerLocationUpdateCheckTime = 0.0f;
 
-    // Sprite Renderer에 접근할 수 있는 변수
-    public SpriteRenderer m_SpriteRenderer = null;
-
     // 복사 생성시킬 미사일의 원본 오브젝트를 참조할 변수
     public GameObject m_MissileOriginal = null;
 
     // 미사일을 쏠 때 지난 시간을 체크할 변수
     public float _MissileDropCheckTime = 0.0f;
+
+    // 복사 생성시킬 유도 미사일의 원본 오브젝트를 참조할 변수
+    public GameObject m_HomingMissileOriginal = null;
+
+    // 유도 미사일을 쏠 때 지난 시간을 체크할 변수
+    public float _HomingMissileDropCheckTime = 0.0f;
 
     // > 방향 벡터를 저장할 변수
     private Vector2 _DirectionVector = Vector2.up;
@@ -166,5 +169,20 @@ public class Enemy : MonoBehaviour
 
             CreateMissile();
         }
+        //if (Time.time - _HomingMissileDropCheckTime >= Random.Range(0.4f, 0.5f))
+        //{
+        //    _HomingMissileDropCheckTime = Time.time;
+
+        //    CreateHomingMissile();
+        //}
     }
+    
+    //private void CreateHomingMissile()
+    //{
+    //    GameObject newMissile = Instantiate(m_HomingMissileOriginal);
+
+    //    newMissile.transform.position = transform.position;
+
+    //    Destroy(newMissile, 5.0f);
+    //}
 }

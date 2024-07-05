@@ -229,9 +229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Player: {fileID: 1353983094}
-  m_SpriteRenderer: {fileID: 0}
   m_MissileOriginal: {fileID: 6758316635163869015, guid: 42a5ece2da8aab84286af614dc979762, type: 3}
   _MissileDropCheckTime: 0
+  m_HomingMissileOriginal: {fileID: 7601819075093708733, guid: b5abdf470415a1f4a931d5a10a0e09d5, type: 3}
+  _HomingMissileDropCheckTime: 0
 --- !u!114 &415421843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +299,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1127,7 +1128,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1000
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: e2a315435eee95947b7492475d0bd53a, type: 3}
   m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
   m_FlipX: 0
