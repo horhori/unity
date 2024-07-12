@@ -44,4 +44,49 @@ public class PlayerMovement : MonoBehaviour
         _HoriMinMax = new MinMax(-8.5f, 8.5f);
         _VertMinMax = new MinMax(-4.5f, 4.5f);
     }
+
+    private void Update()
+    {
+        // 키 입력 처리
+        InputKey();
+
+        // 플레이어 이동
+        PlayerMove();
+    }
+
+    private void InputKey()
+    {
+        // 수평 축 입력
+        _InputHorizontal = Input.GetAxis("Horizontal");
+        // 수직 축 입력
+        _InputVertical = Input.GetAxis("Vertical");
+    }
+
+    // 플레이어 이동 제어
+    private void PlayerMove()
+    {
+        // 플레이어 이동 범위를 한정
+        // 내부(local) 함수
+        void LimitPlayerMove()
+        {
+            // > 한정된 플레이어 위치를 저장할 변수
+            Vector2 playerPosition;
+
+            // > 위치 한정
+            playerPosition.x = _HoriMinMax.Clamp(transform.position.x);
+            playerPosition.y = _VertMinMax.Clamp(transform.position.y);
+
+            // 한정된 위치로 플레이어 위치를 저장
+            transform.position = playerPosition;
+        }
+
+        // 수평 제어
+        transform.Translate(Vector2.right * _InputHorizontal * _MoveSpeed * Time.deltaTime, Space.World);
+
+        // 수직 제어
+        transform.Translate(Vector2.up * _InputVertical * _MoveSpeed * Time.deltaTime, Space.World);
+
+        // 이동 범위 제어
+        LimitPlayerMove();
+    }
 }
