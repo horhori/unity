@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class Explosion : MonoBehaviour, IRecyclableGameObject
 {
-    // Start is called before the first frame update
-    void Start()
+    // 재사용 오브젝트 활성화 프로퍼티
+    public bool isActive { get; set; } = true;
+
+    private void OnExplosionAnimEnded()
     {
-        
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    // ExplosionPool이 켜질 때마다 
+    private void OnEnable()
     {
-        
+        isActive = true;
+    }
+
+    private void OnDisable()
+    {
+        isActive = false;
     }
 }

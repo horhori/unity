@@ -1,18 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ExplosionPool : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // 
+    public Explosion m_ExplosionOri = null;
+    private ObjectPool<Explosion> _ExplosionPool = null;
+
+    // 
+    private void Awake()
     {
-        
+        Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Initialize()
     {
-        
+        _ExplosionPool = new ObjectPool<Explosion>();
+    }
+
+    // Æø¹ß ½ÇÇà
+    public void PlayExplosion(Vector2 position)
+    {
+        Explosion explosion = _ExplosionPool.GetRecyclableObject() ??
+            _ExplosionPool.RegisterRecyclableObject(Instantiate(m_ExplosionOri));
+        explosion.gameObject.SetActive(true);
+        explosion.transform.position = position;
     }
 }

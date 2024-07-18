@@ -15,12 +15,14 @@ public class PlayerInstance : MonoBehaviour, ICharacter
     private SpriteRenderer _Sprite = null;
 
     // 폭탄 컴포넌트를 참조할 변수
-
+    private ExplosionPool _Explosion = null;
 
     private void Awake()
     {
         // 게임이 실행될 때 플레이어 이미지를 찾음
         _Sprite = transform.Find("PlayerImage").GetComponent<SpriteRenderer>();
+
+        _Explosion = GameObject.Find("ExplosionPool")?.GetComponent<ExplosionPool>();
 
         // > 플레이어 객체를 참조시킴
         GameManager.gameManager.playerInstance = this;
@@ -46,7 +48,7 @@ public class PlayerInstance : MonoBehaviour, ICharacter
             else
             {
                 // 폭발 애니메이션 재생
-
+                _Explosion.PlayExplosion(transform.position);
                 gameObject.SetActive(false);
             }
         }

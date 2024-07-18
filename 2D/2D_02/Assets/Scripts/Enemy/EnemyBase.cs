@@ -10,6 +10,7 @@ public abstract class EnemyBase : MonoBehaviour, ICharacter
     public float hp { get; private set; } = 100.0f;
 
     // 폭발 애니메이션 풀
+    private ExplosionPool _Explosion = null;
     protected virtual void Awake()
     {
         Initialize();
@@ -29,6 +30,8 @@ public abstract class EnemyBase : MonoBehaviour, ICharacter
             Die();
         }
 
+        _Explosion = GameObject.Find("ExplosionPool")?.GetComponent<ExplosionPool>();
+
         // 자동 비활성화 시작
         StartCoroutine(AutoDestroy());
     }
@@ -36,7 +39,10 @@ public abstract class EnemyBase : MonoBehaviour, ICharacter
     // 폭발 애니메이션 메서드
     private void Die()
     {
-
+        // 폭발 애니메이션 재생
+        _Explosion.PlayExplosion(transform.position);
+        // 적 비활성화
+        gameObject.SetActive(false);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
