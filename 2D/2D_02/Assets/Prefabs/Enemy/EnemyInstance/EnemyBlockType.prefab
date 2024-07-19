@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9045998307911761183}
   - component: {fileID: 7192098789546840324}
   - component: {fileID: 5135007802690452780}
+  - component: {fileID: 8506649161107378644}
   m_Layer: 0
   m_Name: HPCanvas
   m_TagString: Untagged
@@ -101,6 +102,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8506649161107378644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438387154630853863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77933406236759f498d86cd44c98bd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3996501232557560920
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +285,7 @@ GameObject:
   - component: {fileID: 2128157155468355332}
   m_Layer: 0
   m_Name: EnemyBlockType
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

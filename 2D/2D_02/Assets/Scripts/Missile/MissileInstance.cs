@@ -47,6 +47,7 @@ public class MissileInstance : MonoBehaviour, IRecyclableGameObject
     // Exit : 충돌이 막 끝났을 때
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("missile 충돌");
         if(collision.CompareTag("Enemy"))
         {
             gameObject.SetActive(false);

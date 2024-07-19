@@ -47,6 +47,7 @@ public abstract class EnemyBase : MonoBehaviour, ICharacter
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("적상황");
         // 플레이어 미사일과 겹쳤을 때
         if(other.CompareTag("PlayerMissile"))
         {
