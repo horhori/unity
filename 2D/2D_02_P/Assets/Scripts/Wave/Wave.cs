@@ -5,7 +5,7 @@ using UnityEngine;
 public class Wave : MonoBehaviour
 {
     // 웨이브가 끝났는지 검사할 프로퍼티
-    public bool waveClear { get; private set; } = false;
+    public bool WaveClear { get; private set; } = false;
 
     // 하나의 웨이브에 추가된 적 오브젝트를 가리킬 요소 리스트
     private List<EnemyBase> _WaveEnemies = null;
@@ -41,7 +41,7 @@ public class Wave : MonoBehaviour
             _WaveEnemies.Find((EnemyBase enemy) => enemy.gameObject.activeSelf) == null);
 
             // > 웨이브 클리어
-            waveClear = true;
+            WaveClear = true;
 
             // 해당 웨이브에 있는 모든 적을 제거
             foreach (EnemyBase enemy in _WaveEnemies)
