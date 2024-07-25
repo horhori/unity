@@ -26,4 +26,26 @@ public class PlayerMovement : MonoBehaviour, IMovement
     {
         _rigid = GetComponent<Rigidbody2D>();
     }
+
+    private void Update()
+    {
+        InputKey();
+        // Imovement의 Movement처럼 사용하겠다.
+        (this as IMovement).Movement();
+    }
+
+    // 키 입력 처리
+    private void InputKey()
+    {
+        dirVector = new Vector2(
+            _InputHorizontal = (Mathf.Approximately(_InputVertical, 0.0f) ?
+           Input.GetAxisRaw("Horizontal") : 0.0f),
+            _InputVertical = (Mathf.Approximately(_InputHorizontal, 0.0f) ?
+        Input.GetAxisRaw("Vertical") : 0.0f));
+    }
+
+    void IMovement.Movement()
+    {
+        _rigid.AddForce(dirVector * _MoveSpeed, ForceMode2D.Force);
+    }
 }
