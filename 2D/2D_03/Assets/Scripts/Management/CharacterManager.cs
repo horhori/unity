@@ -13,5 +13,5 @@ public class CharacterManager : MonoBehaviour, IManager
     public Ground playerExistenceArea { get; set; }
 
     // 상호 작용 가능한 오브젝트
-
+    public IInteractionable interactionableObject { get; set; }
 }

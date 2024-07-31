@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +42,11 @@ public class PlayerInstance : MonoBehaviour, ICharacter
         UpdateLookDirection(movement.dirVector);
 
         UpdatePlayerAction(movement.dirVector);
+
+        InputKey();
     }
+
+
 
     private void UpdateLookDirection(Vector2 dir)
     {
@@ -79,5 +84,18 @@ public class PlayerInstance : MonoBehaviour, ICharacter
         {
             playerAction = PlayerAction.Run;
         }
+    }
+
+    private void InputKey()
+    {
+        if(Input.GetKeyDown(KeyCode.F) && _CharacterManager.interactionableObject != null)
+        {
+            TryInteraction();
+        }
+    }
+
+    private void TryInteraction()
+    {
+        _CharacterManager.interactionableObject.Interaction();
     }
 }

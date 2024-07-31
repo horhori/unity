@@ -34,8 +34,7 @@ public class GameManager : MonoBehaviour
 
         // 하위 매니저 클래스 등록
         RegisterManagerClass<CharacterManager>();
-
-        // 로드매니저 추가
+        RegisterManagerClass<LoadManager>();
 
     }
 
