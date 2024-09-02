@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager _GameManagerInstance = null;
     public List<IManager> _ManagerClass = null;
 
+    public bool stageClear { get; set; } = false;
+
+    public int StageCount { get; set; } = 1;
     public static GameManager gameManager
     {
         get
