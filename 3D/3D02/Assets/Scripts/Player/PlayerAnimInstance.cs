@@ -51,12 +51,14 @@ public class PlayerAnimInstance : MonoBehaviour, IAnimInstance
     public bool SetBool(string paramName, bool value)
     {
         animator.SetBool(paramName, value);
+
         return value;
     }
 
     public float SetFloat(string paramName, float value)
     {
         animator.SetFloat(paramName, value);
+
         return value;
     }
 
@@ -69,6 +71,7 @@ public class PlayerAnimInstance : MonoBehaviour, IAnimInstance
     public void SetTrigger(string paramName)
     {
         animator.SetTrigger(paramName);
+
     }
     #endregion
 }
