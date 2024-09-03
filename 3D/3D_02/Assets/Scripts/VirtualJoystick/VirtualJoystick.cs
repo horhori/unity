@@ -30,14 +30,14 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     {
         float ratio = UnityEngine.Screen.width / 900.0f;
 
-
         _InputVector = eventData.position / ratio;
         _InputVector -= rectTransform.offsetMin;
+        Debug.Log(rectTransform.offsetMin);
 
         float backHalfXSize = m_JoystickBackground.rectTransform.sizeDelta.x * 0.5f;
 
         _InputVector = (m_JoystickBackground.rectTransform.anchoredPosition - _InputVector) *
-            -1.0f / backHalfXSize;
+        -1.0f / backHalfXSize;
 
         _InputVector = (_InputVector.magnitude > 1.0f) ?
             _InputVector.normalized : _InputVector;
